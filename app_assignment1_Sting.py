@@ -15,7 +15,7 @@ response = client.chat.completions.create(
     response_format={"type": "json_object"},
     # Conversation as a list of messages.
     messages=[
-        {"role": "system", "content": "You will be provided a movie and your task is to create a news headline as a review for this movie, in the style of Siskel and Ebert. Then, Convert the user's query in a JSON object."},
+        {"role": "system", "content": "You will be provided a movie and your task is to create a news headline as a review for this movie, in the style of Siskel and Ebert. Then, convert your response into a JSON object."},
         {
             "role": "user",
             "content": "Indiana Jones",
