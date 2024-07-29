@@ -11,7 +11,7 @@ from flask import Flask, request, render_template # New imports to support web a
 import config
 import json
 
-client = OpenAI(api_key=config.OPENAI_API_KEY)
+client = OpenAI(api_key=config.OPENAI_API_KEY) # ADD YOUR OWN CONFIG.PY IN SAME DIRECTORY AS APP.PY, WITH AN OPENAI_API_KEY VAR THAT HAS YOUR API KEY!
 app = Flask(__name__) # Add a Flask instance
 
 def ask_chatgpt(messages):
