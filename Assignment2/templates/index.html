@@ -1,0 +1,92 @@
+<!--========================-->
+<!--CS-391: Assignment 2    -->
+<!--Brendan Sting           -->
+<!--Kettering University    -->
+<!--========================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube URL Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dff5dd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .input-group input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            flex-grow: 1;
+        }
+        .input-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #45a049;
+        }
+        .description {
+            margin-top: 20px;
+        }
+        .description textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+            background-color: #f0f0f0;
+        }
+        .description textarea[readonly] {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube AI Web Summarizer</h1>
+        <div class="input-group">
+            <form action="/submit" method="post">
+                <input type="text" placeholder="Enter YouTube URL" id="URL" name="URL">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="description">
+            <textarea placeholder="Video transcript will appear here..." readonly>{{transcript}}</textarea>
+        </div>
+    </div>
+</body>
+</html>
+
